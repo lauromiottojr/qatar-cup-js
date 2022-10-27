@@ -52,6 +52,7 @@ $( document ).ready(function() {
   $("#containerSemi").hide();
   $("#containerFinal").hide();
   $("#containerGanhador").hide();
+  $("#my-canvas").hide();
 });
 
 $( "#btnJogarPrimeiraFase" ).click(function() {
@@ -61,21 +62,24 @@ $( "#btnJogarPrimeiraFase" ).click(function() {
   	chamarOitavas();
   		count++;
 	} else if (count == 1){
-		$("#containerOitavas").hide("fast");
-  		$("#containerQuartas").show("fast");
+		//$("#containerOitavas").hide("fast");
+  	$("#containerQuartas").show("fast");
   		chamarQuartas();
   		count++;
 	} else if (count == 2){
-		$("#containerQuartas").hide("fast");
-  		$("#containerSemi").show("fast");
+		//$("#containerQuartas").hide("fast");
+		$("#containerOitavas").hide("fast");
+  	$("#containerSemi").show("fast");
   		chamarSemi();
   		count++;
 	} else if (count == 3){
-		$("#containerSemi").hide("fast");
+		// $("#containerSemi").hide("fast");
+		$("#containerQuartas").hide("fast");
   	$("#containerFinal").show("fast");
   		ChamarFinal();
   		count++;
 	} else if (count == 4){
+		$("#containerSemi").hide("fast");
 		$("#containerFinal").hide("fast");
   	$("#containerGanhador").show("fast");
 		chamarGanhador();
@@ -253,6 +257,7 @@ function chamarGanhador(){
 	document.getElementById("ganhadorImg").src = "img/" + ganhador + ".png";
 
 	$("#btnJogarPrimeiraFase").hide("fast");
+  $("#my-canvas").show();
 
 
 }

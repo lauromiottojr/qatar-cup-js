@@ -1,5 +1,7 @@
+ @import url('http://fonts.cdnfonts.com/css/qatar2022');
 .body {
   background-color: rgb(139, 22, 56);
+  font-family: 'Qatar2022', sans-serif;
 }
 
 .tabela-fase1 {
@@ -8,13 +10,14 @@
   border-collapse: collapse;
   margin: 5% 2% 5% 0%;
   background-color: rgb(237, 238, 228);
+  color: rgb(139, 22, 56);
 }
 
 .title {
   text-align: center;
-  border-bottom: 1px black solid;
+  border-bottom: 1px rgb(202, 196, 157) solid;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .coluna-bandeira{
@@ -42,6 +45,17 @@
 }
 
 .img-ganhador {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
+}
+.teste {
+  position: absolute;
+}
+.tabela-final {
+  width: 100%;
+  float: left;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: rgb(237, 238, 228);
+  color: rgb(139, 22, 56);
 }
